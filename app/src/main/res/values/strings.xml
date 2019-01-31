@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test3</string>
+    <string name="kakao_app_key">62cc9ff08d705041e87d6b5e34fdd795</string>
+
+    <string name="mainBtn">메인으로</string>
+
+</resources>

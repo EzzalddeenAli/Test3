@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "250430821676",
+    "firebase_url": "https://test3-569e1.firebaseio.com",
+    "project_id": "test3-569e1",
+    "storage_bucket": "test3-569e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250430821676:android:35973500a7d2e62e",
+        "android_client_info": {
+          "package_name": "com.onvit.Test3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250430821676-2vrin9rqhc3l0uvderqrce9bvubm59vq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onvit.Test3",
+            "certificate_hash": "7784c6c0ece14b906aaf921e07cb90c5f29b1062"
+          }
+        },
+        {
+          "client_id": "250430821676-p4spvvvoldcq2epuro9nmmmn2fci91uh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzazw7SWxua_M9YnJ7y5JIZPg5CBqPx_0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250430821676-p4spvvvoldcq2epuro9nmmmn2fci91uh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
