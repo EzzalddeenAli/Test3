@@ -27,16 +27,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         String userId = getSharedPreferences(getPackageName(), MODE_PRIVATE).getString("userId", null);
+        if(userId!=null) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
 
-        Button mainBtn = findViewById(R.id.mainBtn);
-        mainBtn.setOnClickListener((view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        });
     }
 
     class SessionCallback implements ISessionCallback {
@@ -76,15 +75,19 @@ public class LoginActivity extends AppCompatActivity {
                 String userEmail = result.getKakaoAccount().getEmail();
                 Log.d("requestMeSuccess", userId + " , " + userEmail);
 
-                SharedPreferences.Editor editor = getSharedPreferences(getPackageName(),MODE_PRIVATE).edit();
-                editor.putString("userId", userId);
-                editor.putString("userEmail", userEmail );
-                editor.apply();
-
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                saveToSharedPrefences(userId);
             }
         });
+    }
+
+    private void saveToSharedPrefences(String userId) {
+
+        SharedPreferences.Editor editor = getSharedPreferences(getPackageName(),MODE_PRIVATE).edit();
+        editor.putString("userId", userId);
+        editor.apply();
+
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
